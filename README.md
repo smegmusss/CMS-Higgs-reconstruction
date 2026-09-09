@@ -23,34 +23,3 @@ The analysis bypasses the need for local multi-gigabyte dataset downloads by str
           │ ──> Histogram binning (70 - 150 GeV)
           └─> Signal Peak Emergence at 125 GeV (Higgs Resonance)
 
-## 📁 Repository Structure
-
-CMS-Higgs-reconstruction/
-├── include/
-│   └── Particle.hpp           # 4-momentum structures & Lorentz vector algebra
-├── src/
-│   └── main.cpp               # Streaming event loop & invariant mass reconstruction
-├── CMakeLists.txt             # Cross-platform build script
-├── PHYSICS.md                 # Theoretical derivations & mathematical background
-├── cms_event_display.png      # CMS 4-muon candidate visualization
-├── LICENSE                    # MIT License
-└── README.md                  # Project overview & quickstart
-
-🛠️ Build & Running
-
-This project uses CMake for build automation and cross-platform compilation.
-Prerequisites
-
-    * C++ Compiler with C++17 support (g++ or clang++)
-    * Build System: cmake (v3.12 or higher)
-
-Compilation Steps
-
-    1. Clone the repository:
-     git clone [https://github.com/smegmusss/CMS-Higgs-reconstruction.git](https://github.com/smegmusss/CMS-Higgs-     reconstruction.git)
-
-    2. Generate Makefiles and compile:
-    mkdir -p build && cd build && cmake .. && make
-
-    3. Execute the binary:
-    ./higgs_recon
