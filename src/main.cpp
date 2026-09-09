@@ -6,6 +6,9 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
+#include <fstream>
+#include <sstream>
 #include <cmath>
 #include "../include/Particle.hpp"
 
@@ -13,14 +16,34 @@ using namespace std;
 
 int main() {
 
-    // Simulated input data for the 4 detected muons 
-    vector<Particle> muons = {
-        Particle(37.5, -0.4,  1.2),
-        Particle(31.2,  0.8, -1.9),
-        Particle(24.1,  1.1,  2.8),
-        Particle(12.8, -1.5, -0.5)
-    };
+    ifstream file("data/4mu_2012.csv");
+    ofstream outFile("output/masses.txt");
 
+    if(!file.is_open()) {
+        cout << "Error" <<endl;
+        return 1;
+    }
+    string header;
+    file >> header; // Skipping the header
+
+    // Variables to read the csv file
+    double Run, Event, pt1, eta1, phi1, pt2, eta2, phi2, pt3, eta3, phi3, pt4, eta4, phi4;
+    char comma;
+
+    int count = 0;
+
+    while (file >> comma >> Run >> comma >> Event >> comma >> pt1 >> comma >> eta1
+        >> comma >> phi1 >> comma >> pt2 >> comma >> eta2 >> comma >> phi2 
+        >> comma >> pt3 >> comma >> eta3 >> comma >> phi3 >> comma >> pt4 
+        >> comma >> eta4 >> comma >> phi4) 
+        {
+            vector<Particle> muons = {
+            Particle(pt1, eta1, phi1),
+            Particle(pt2, eta2, phi2),
+            Particle(pt3, eta3, phi3),
+            Particle(pt4, eta4, phi4)
+        };
+            
     // Kinematic cut: pt treshold = 5.0
     bool passesCut = true;
     for (const auto& muon : muons) {
@@ -33,7 +56,7 @@ int main() {
 
     if (!passesCut) {
         cout << "Event rejected: one or more muons failed the pT threshold!" << endl;
-        return 0;
+        continue;
     }
 
     // Sum the 4 momentum components
