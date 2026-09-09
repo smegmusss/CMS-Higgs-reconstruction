@@ -23,14 +23,17 @@ The analysis bypasses the need for local multi-gigabyte dataset downloads by str
           │ ──> Histogram binning (70 - 150 GeV)
           └─> Signal Peak Emergence at 125 GeV (Higgs Resonance)
 ```
-📁 Repository Structure
+## 📁 Repository Structure
 
-   * include/Particle.hpp - Header file defining particle kinematics and 4-momentum structures
-   * src/main.cpp - Event processing loop & 4-muon invariant mass calculation
-   * CMakeLists.txt - Cross-platform CMake build system configuration
-   * PHYSICS.md - Theoretical kinematic derivation and physics background
-   * cms_event_display.png - Visual representation of a 4-muon event in the CMS detector
-   * README.md - Project architecture and execution guide
+* [include/](./include/) — Directory containing header files
+  * [include/Particle.hpp](./include/Particle.hpp) — Particle kinematics and Lorentz vector structures
+* [src/](./src/) — Source code directory
+  * [src/main.cpp](./src/main.cpp) — Processing loop & invariant mass reconstruction
+* [CMakeLists.txt](./CMakeLists.txt) — Cross-platform CMake build configuration
+* [PHYSICS.md](./PHYSICS.md) — Theoretical derivations and physics background
+* [cms_event_display.png](./cms_event_display.png) — CMS event display visualization
+* [LICENSE](./LICENSE) — MIT License
+* [README.md](./README.md) — Project documentation and setup guide
 
 🛠️ Build & Running
 
