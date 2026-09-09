@@ -1,4 +1,5 @@
 --- Reconstruction Complete ---
+*See output/README.md for energy region descriptions*
 Total processed events saved: 95
 140.124
 209.535
