@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  * @author smegmusss
- * @brief CMS Higgs to 4 muons invariant mass reconstruction (Explicit Math).
+ * @brief CMS Higgs to 4 muons invariant mass reconstruction
  */
 
 #include <iostream>
@@ -19,7 +19,7 @@ int main() {
     ifstream file("data/4mu_2012.csv");
     ofstream outFile("output/masses.txt");
 
-    if(!file.is_open()) {
+    if (!file.is_open()) {
         cout << "Error opening input file!" << endl;
         return 1;
     }
@@ -32,7 +32,6 @@ int main() {
 
     int count = 0;
 
-    // Rimossa la prima virgola prima di Run
     while (file >> Run >> comma >> Event >> comma >> pt1 >> comma >> eta1
         >> comma >> phi1 >> comma >> pt2 >> comma >> eta2 >> comma >> phi2 
         >> comma >> pt3 >> comma >> eta3 >> comma >> phi3 >> comma >> pt4 
@@ -86,6 +85,7 @@ int main() {
         count++;
     }
 
+    // Final result
     cout << "\n--- Reconstruction Complete ---" << endl;
     cout << "Total processed events saved: " << count << endl;
 
