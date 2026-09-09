@@ -25,13 +25,16 @@ The analysis bypasses the need for local multi-gigabyte dataset downloads by str
 
 ## 📁 Repository Structure
 
-- [include/Particle.hpp](./include/Particle.hpp) - Header file defining particle kinematics and 4-momentum structures
-- [src/main.cpp](./src/main.cpp) - Event processing loop & 4-muon invariant mass calculation
-- [CMakeLists.txt](./CMakeLists.txt) - Cross-platform CMake build system configuration
-- [PHYSICS.md](./PHYSICS.md) - Theoretical kinematic derivation and physics background
-- [cms_event_display.png](./cms_event_display.png) - Visual representation of a 4-muon event in the CMS detector
-- [LICENSE](./LICENSE) - Project open-source license (MIT)
-- [README.md](./README.md) - Project architecture and execution guide
+CMS-Higgs-reconstruction/
+├── include/
+│   └── Particle.hpp           # 4-momentum structures & Lorentz vector algebra
+├── src/
+│   └── main.cpp               # Streaming event loop & invariant mass reconstruction
+├── CMakeLists.txt             # Cross-platform build script
+├── PHYSICS.md                 # Theoretical derivations & mathematical background
+├── cms_event_display.png      # CMS 4-muon candidate visualization
+├── LICENSE                    # MIT License
+└── README.md                  # Project overview & quickstart
 
 🛠️ Build & Running
 
