@@ -55,6 +55,11 @@ $$p_z = p_T \sinh\eta \quad | \quad E = \sqrt{p_x^2 + p_y^2 + p_z^2 + m_\mu^2}$$
 
 > 💡 **Why $m_{4\mu} \neq \sum m_\mu$:** Simply adding rest masses gives $4 \times 0.1057 \approx 0.42\text{ GeV}$. The remaining $\sim 124.58\text{ GeV}$ comes entirely from the **kinetic energy and angular separation** of the high-speed muons.
 
+### 📸 CMS 3D Event Display (Real Collision Candidate)
+
+Below is an actual proton-proton collision recorded by CMS on July 20, 2012 (Run 199318, Event 119672497). The long red vectors extending through the outer muon chambers represent high-momentum muons reconstructed by the spectrometer.
+
+![CMS 3D Event Display](cms_event_display.png)
 ---
 
 ## Fitting Models Comparison
