@@ -81,7 +81,7 @@ int main() {
             m4mu = sqrt(energy_tot * energy_tot - p2_tot);
         }
 
-        // Salva la massa calcolata sul file per Python
+        // Save the result
         outFile << m4mu << "\n";
         count++;
     }
