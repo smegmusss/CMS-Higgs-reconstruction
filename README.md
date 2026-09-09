@@ -25,7 +25,7 @@ The analysis bypasses the need for local multi-gigabyte dataset downloads by str
 
 📁 Repository Structure
 
-    * include/Particle.hpp: Header file defining particle kinematics and 4-momentum structure
+    * include/Particle.hpp: Header file defining particle kinematics and 4-momentum structures
     * src/main.cpp: Event processing loop & 4-muon invariant mass calculation
     * CMakeLists.txt: Cross-platform CMake build system configuration
     * PHYSICS.md: Theoretical kinematic derivation and physics background
